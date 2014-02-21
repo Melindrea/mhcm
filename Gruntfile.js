@@ -7,6 +7,7 @@
 // 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
+
     grunt.initConfig({
         pkg: require('./package'),
         bower: require('./bower'),
@@ -27,7 +28,8 @@ module.exports = function (grunt) {
             ],
             json: [
                 '*.json',
-                '<%= directories.flatBuild.base %>/data/{,*/}*.json'
+                '<%= directories.flatBuild.base %>/data/{,*/}*.json',
+                'grunt/hooks/data/*.json'
             ]
         }
     });
@@ -37,10 +39,4 @@ module.exports = function (grunt) {
     // load grunt tasks "just in time"
     require('jit-grunt')(grunt);
     grunt.loadTasks('grunt/tasks');
-
-    grunt.registerTask('lint', [
-        'jsvalidate',
-        'jshint',
-        'jsonlint'
-    ]);
 };
