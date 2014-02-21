@@ -13,11 +13,22 @@ module.exports = function (grunt) {
         directories: {
             flatBuild: {
                 base: 'src',
-                build: 'html'
+                build: 'html',
+                js: 'src/assets/js'
             }
         },
         files: {
+            js: [
+                'Gruntfile.js',
+                'grunt/{,*/}*.js',
+                '<%= directories.flatBuild.js %>/{,*/}*.js',
+                '!<%= directories.flatBuild.js %>/vendor/*'
 
+            ],
+            json: [
+                '*.json',
+                '<%= directories.flatBuild.base %>/data/{,*/}*.json'
+            ]
         }
     });
 
@@ -26,4 +37,10 @@ module.exports = function (grunt) {
     // load grunt tasks "just in time"
     require('jit-grunt')(grunt);
     grunt.loadTasks('grunt/tasks');
-}
+
+    grunt.registerTask('lint', [
+        'jsvalidate',
+        'jshint',
+        'jsonlint'
+    ]);
+};
