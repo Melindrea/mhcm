@@ -1,0 +1,90 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>security application</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!--<script src="bower_components/golden-grid-system/GGS.js"></script> messes up momentjs remove in production -->
+        <link href="//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Quattrocento+Sans:700,700italic" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css" rel="stylesheet">
+        <!-- build:css(.tmp) assets/styles/main.css -->
+        <link rel="stylesheet" href="assets/styles/main.css">
+        <link rel="stylesheet" href="bower_components/magnific-popup/dist/magnific-popup.css">
+        <!-- endbuild -->
+        <script>
+          // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          // ga('create', 'UA-42118135-2', 'melindrea.github.io');
+          // ga('send', 'pageview');
+
+        </script>
+        <!-- build:js assets/scripts/head.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/selectivizr/selectivizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <header role="banner">
+            <nav aria-label="main" role="navigation"><!-- role explicit for older browsers, using aria-label to differentiate from other navs -->
+                <ul role="menubar" aria-activedescendant="home-menuitem">
+                            <li role="presentation">
+                <a href="/" role="menuitem" aria-selected="true" id="home-menuitem">Home</a>
+            </li>
+            <li role="presentation">
+    <a href="/users" role="menuitem" aria-selected="false" id="users-index-menuitem">site.users.index.menu</a>
+    </li>
+            <li role="presentation">
+    <a href="http://example.com" role="menuitem" aria-selected="false" id="external-menuitem"rel="external">site.external.menu</a>
+    </li>
+            <li role="presentation">
+                <a href="/docs/policies" role="menuitem" aria-selected="false" id="policies-menuitem">Policies</a>
+            </li>
+                        </ul><!-- //menubar -->
+            </nav><!-- //navigation -->
+        </header>
+
+        {{> body}}
+
+        <footer role="contentinfo">
+
+        </footer>
+
+        <!-- build:js assets/scripts/main.js -->
+        <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
+        <script src="bower_components/showdown/src/showdown.js"></script>
+        <script src="bower_components/momentjs/moment.js"></script>
+        <script src="assets/scripts/main.js"></script>
+        <script src="assets/scripts/lightbox.js"></script>
+        <!-- endbuild -->
+        {{#if ember}}
+        <!-- build:js assets/scripts/ember.js -->
+        <script src="bower_components/handlebars/handlebars.runtime.js"></script>
+        <script src="bower_components/ember/ember.js"></script>
+        <script src="bower_components/ember-data-shim/ember-data.js"></script>
+        <script src="bower_components/ember-localstorage-adapter/localstorage_adapter.js"></script>
+
+        <script src="scripts/compiled-templates.js"></script>
+
+        <script src="scripts/combined-app.js"></script>
+        <!-- endbuild -->
+        {{/if}}
+        <div class="notice" role="alert">
+            This is a notice alert and should fade away
+        </div>
+
+        <!-- TODO: Rewrite this and the notification thingy -->
+        <div class="js-notification">
+        <p><small>By surfing this site you agree to it using cookies to track your movement through it. <a href="/docs/policies">Read more about the cookie and privacy policies.</a></small></p>
+        </div>
+</body>
+</html>
