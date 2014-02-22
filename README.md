@@ -1,3 +1,4 @@
 # README
 
-This, like all the others (such as contributing, authors, whatever) is in the /docs folder as a markdown document. The README is also symlinked to the root.
+- [Tags](http://git-scm.com/book/en/Git-Basics-Tagging) should be signed using GNU Privacy Guard (GPG)
+- Keys need to be 

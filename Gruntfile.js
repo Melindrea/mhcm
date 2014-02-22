@@ -30,7 +30,8 @@ module.exports = function (grunt) {
                 '*.json',
                 '<%= directories.flatBuild.base %>/data/{,*/}*.json',
                 'grunt/hooks/data/*.json'
-            ]
+            ],
+            packages: ['package.json', 'bower.json']
         }
     });
 
