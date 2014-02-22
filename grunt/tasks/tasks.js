@@ -6,9 +6,9 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('lint', [
-        'jsvalidate',
-        'jshint',
-        'jsonlint'
+        'newer:jsvalidate',
+        'newer:jshint',
+        'newer:jsonlint'
     ]);
 
     grunt.registerTask('default', [
