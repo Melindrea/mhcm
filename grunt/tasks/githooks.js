@@ -20,6 +20,12 @@ module.exports = function(grunt) {
                 template: 'grunt/hooks/prependIssue.js.hbs'
             },
             'prepare-commit-msg': true
+        },
+        checkMessageFormat: {
+            options: {
+                template: 'grunt/hooks/checkMessageFormat.js.hbs'
+            },
+            'commit-msg': true
         }
     });
 };
