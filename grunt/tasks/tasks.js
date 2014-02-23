@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     'use strict';
 
     grunt.registerTask('commit', [
@@ -6,6 +6,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('lint', [
+        'newer:jsbeautifier',
         'newer:jsvalidate',
         'newer:jshint',
         'newer:jsonlint'

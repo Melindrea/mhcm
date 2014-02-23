@@ -2,6 +2,7 @@
 !.gitignore
 !.jshintrc
 !.bowerrc
+!.jsbeautifyrc
 !.editorconfig
 !.travis.yml
 !.gitattributes
