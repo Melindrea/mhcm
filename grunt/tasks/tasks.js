@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     'use strict';
 
     grunt.registerTask('commit', [
-        'lint'
+        'concurrent:lint'
     ]);
 
     grunt.registerTask('lint', function(target) {
@@ -13,16 +13,21 @@ module.exports = function(grunt) {
                 'newer:jshint',
                 'newer:jsonlint'
             ]);
+        } else if (target === 'json') {
+            return grunt.task.run([
+                'newer:jsonlint'
+            ]);
         }
 
         grunt.task.run([
-            'lint:scripts'
+            'lint:scripts',
+            'lint:json'
         ]);
     });
 
     grunt.registerTask('default', [
-        'lint',
-        'build'
+        'concurrent:lint',
+        'concurrent:build'
     ]);
 
 };
