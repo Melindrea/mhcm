@@ -5,16 +5,24 @@ module.exports = function(grunt) {
         'lint'
     ]);
 
-    grunt.registerTask('lint', [
-        'newer:jsbeautifier',
-        'newer:jsvalidate',
-        'newer:jshint',
-        'newer:jsonlint'
-    ]);
+    grunt.registerTask('lint', function(target) {
+        if (target === 'scripts') {
+            return grunt.task.run([
+                'newer:jsbeautifier',
+                'newer:jsvalidate',
+                'newer:jshint',
+                'newer:jsonlint'
+            ]);
+        }
+
+        grunt.task.run([
+            'lint:scripts'
+        ]);
+    });
 
     grunt.registerTask('default', [
         'lint',
-        'assemble'
+        'build'
     ]);
 
 };

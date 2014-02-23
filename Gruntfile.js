@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             flatBuild: {
                 base: 'src',
                 build: 'html',
-                js: 'src/assets/js'
+                js: 'src/assets/scripts'
             }
         },
         files: {

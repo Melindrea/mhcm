@@ -49,6 +49,7 @@ results
 
 npm-debug.log
 node_modules
-src/bower_modules
+src/bower_components
+src/assets/scripts/vendor
 
 html
