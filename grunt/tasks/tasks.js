@@ -30,4 +30,12 @@ module.exports = function(grunt) {
         'concurrent:build'
     ]);
 
+    grunt.registerTask('server', function() {
+        grunt.task.run([
+            'clean:flatBuild',
+            'concurrent:build',
+            'connect:livereload',
+            'watch'
+        ]);
+    });
 };
