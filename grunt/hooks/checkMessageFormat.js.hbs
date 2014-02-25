@@ -1,6 +1,6 @@
 var fs = require('fs'),
 sh = require('execSync').run,
-prompt = require('prompt'),
+{{!-- prompt = require('prompt'), --}}
 child_process = require('child_process'),
 branchName = require('execSync').exec('git branch | grep \'*\' | sed \'s/* //\'').stdout.trim(),
 msgFile = process.argv[2],
