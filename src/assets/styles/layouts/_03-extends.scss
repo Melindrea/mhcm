@@ -1,0 +1,15 @@
+%container {
+    @include container;
+}
+
+%inner-container {
+    @include inner-container;
+}
+
+%top-container {
+    @include container(1, 2, 0);
+}
+
+%bottom-container {
+    @include container(1, 0);
+}

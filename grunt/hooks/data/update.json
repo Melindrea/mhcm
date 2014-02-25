@@ -10,5 +10,9 @@
     {
         "file": "Gruntfile.js",
         "command": "grunt githooks"
+    },
+    {
+        "file": "Gruntfile.js",
+        "command": "grunt githooks"
     }
 ]

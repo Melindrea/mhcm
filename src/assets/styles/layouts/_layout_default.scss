@@ -1,0 +1,66 @@
+// Default layout; does not have a submenu, is assumed to be mainly text
+// -----------------------------------------------------------------------------
+
+[role="banner"],
+[role="document"],
+[role="contentinfo"] {
+    @extend %clearfix;
+}
+
+[role="banner"] {
+    @extend %top-container;
+}
+
+[role="document"] {
+    @extend %bottom-container;
+}
+
+[role="contentinfo"] {
+    @extend %container;
+}
+
+main,
+[aria-label="submenu"],
+[aria-label="main"] {
+    @extend %inner-container;
+    @extend %clearfix;
+}
+
+// Media queries
+// -----------------------------------------------------------------------------
+[role="document"] {
+    @include breakpoint(45em) {
+        main {
+            padding: 2em;
+        }
+    }
+    @include breakpoint(55em) {
+        main {
+            padding: 2em 4em;
+        }
+    }
+    @include breakpoint(65em) {
+        @include container(3, 0);
+    }
+    @include breakpoint(85em) {
+        @include container(5, 0);
+    }
+}
+
+[role="banner"] {
+    @include breakpoint(65em) {
+        @include container(3, 2, 0);
+    }
+    @include breakpoint(85em) {
+        @include container(5, 2, 0);
+    }
+}
+
+[role="contentinfo"] {
+    @include breakpoint(65em) {
+        @include container(3);
+    }
+    @include breakpoint(85em) {
+        @include container(5);
+    }
+}

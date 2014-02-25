@@ -6,18 +6,18 @@ module.exports = function(grunt) {
             files: ['<%= directories.flatBuild.base %>/{content,data,templates}/**/*.{md,hbs,yml,json}'],
             tasks: ['assemble']
         },
-        // styles: {
-        //     files: ['<%= directories.flatBuild.styles %>/{,*/}*.scss'],
-        //     tasks: ['compass', 'modernizr']
+        styles: {
+            files: ['<%= directories.flatBuild.styles %>/{,*/}*.scss'],
+            tasks: ['compass']
+        },
+        // scripts: {
+        //     files: ['<%= directories.flatBuild.js %>/{,*/}*.js'],
+        //     tasks: ['scripts', 'modernizr']
         // },
-        scripts: {
-            files: ['<%= directories.flatBuild.js %>/{,*/}*.js'],
-            tasks: ['scripts', 'modernizr']
-        },
-        images: {
-            files: ['<%= directories.flatBuild.base %>/assets/images/{,*/}*'],
-            tasks: ['images']
-        },
+        // images: {
+        //     files: ['<%= directories.flatBuild.base %>/assets/images/{,*/}*'],
+        //     tasks: ['images']
+        // },
         // fonts: {
         //     files: ['<%= directories.flatBuild.base %>/assets/fonts/{,*/}*'],
         //     tasks: ['fonts']

@@ -1,0 +1,11 @@
+# Gemfile for mhcm
+source "https://rubygems.org"
+
+group :development do
+gem "compass"
+gem "breakpoint"
+gem "csscss"
+gem "sass-globbing"
+gem "watson-ruby"
+gem "ghi"
+end
