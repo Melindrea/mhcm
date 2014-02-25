@@ -13,8 +13,16 @@ module.exports = function(grunt) {
                 hostname: 'localhost',
                 open: true,
                 base: [
-                    '<%= directories.flatBuild.src %>',
+                    '<%= directories.flatBuild.base %>',
                     '<%= directories.flatBuild.build %>'
+                ]
+            }
+        },
+        test: {
+            options: {
+                base: [
+                    '<%= directories.flatBuild.base %>',
+                    '<%= directories.test.mocha %>'
                 ]
             }
         }

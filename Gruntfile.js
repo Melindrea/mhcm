@@ -17,6 +17,9 @@ module.exports = function(grunt) {
                 build: 'html',
                 js: 'src/assets/scripts',
                 styles: 'src/assets/styles',
+            },
+            test: {
+                mocha: 'test/mocha'
             }
         },
         files: {

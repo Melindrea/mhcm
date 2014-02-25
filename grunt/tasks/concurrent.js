@@ -3,6 +3,7 @@ module.exports = function(grunt) {
 
     grunt.config('concurrent', {
         'lint': ['lint:scripts', 'lint:json'],
-        'build': ['build:scripts', 'build:html']
+        'build': ['build:scripts', 'build:html'],
+        'test': ['test:mocha']
     });
 };
