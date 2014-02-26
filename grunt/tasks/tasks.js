@@ -6,29 +6,10 @@ module.exports = function(grunt) {
         'concurrent:test'
     ]);
 
-    grunt.registerTask('lint', function(target) {
-        if (target === 'scripts') {
-            return grunt.task.run([
-                'newer:jsbeautifier',
-                'newer:jsvalidate',
-                'newer:jshint',
-                'newer:jsonlint'
-            ]);
-        } else if (target === 'json') {
-            return grunt.task.run([
-                'newer:jsonlint'
-            ]);
-        }
-
-        grunt.task.run([
-            'lint:scripts',
-            'lint:json'
-        ]);
-    });
-
     grunt.registerTask('default', [
         'concurrent:lint',
-        'concurrent:build'
+        'concurrent:build',
+        'concurrent:test'
     ]);
 
     grunt.registerTask('server', function() {

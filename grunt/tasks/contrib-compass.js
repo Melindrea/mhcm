@@ -14,7 +14,6 @@ module.exports = function(grunt) {
             importPath: '<%= directories.flatBuild.base %>/bower_components',
             httpFontsPath: '/assets/fonts',
             relativeAssets: false,
-            outputStyle: 'compressed',
             require: [
                 'breakpoint',
                 'sass-globbing'
@@ -22,7 +21,16 @@ module.exports = function(grunt) {
         },
         dist: {
             options: {
-                generatedImagesDir: '<%= directories.flatBuild.build %>/assets/images/generated'
+                generatedImagesDir: '<%= directories.flatBuild.build %>/assets/images/generated',
+                outputStyle: 'compressed',
+                noLineComments: true
+            }
+        },
+        lint: {
+            options: {
+                cssDir: '.tmp',
+                outputStyle: 'expanded',
+                noLineComments: false
             }
         }
     });

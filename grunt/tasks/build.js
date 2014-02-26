@@ -12,11 +12,16 @@ module.exports = function(grunt) {
             return grunt.task.run([
                 'assemble'
             ]);
+        } else if (target === 'css') {
+            return grunt.task.run([
+                'compass:dist'
+            ]);
         }
 
         grunt.task.run([
             'build:scripts',
-            'build:html'
+            'build:html',
+            'build:css'
         ]);
     });
 };

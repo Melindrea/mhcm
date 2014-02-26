@@ -5,8 +5,8 @@ module.exports = function(grunt) {
         options: {
             verbose: true
         },
-        dist: {
-            src: ['<%= directories.flatBuild.build %>/assets/styles/main.css']
+        lint: {
+            src: ['.tmp/main.css']
         }
     });
 };
