@@ -7,6 +7,7 @@ module.exports = function(grunt) {
         },
         'lint': ['lint:scripts', 'lint:json', 'lint:css'],
         'build': ['build:scripts', 'build:html', 'build:css', 'build:fonts'],
+        'build2': ['build:images'],
         'test': ['test:mocha']
     });
 };

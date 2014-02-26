@@ -19,7 +19,12 @@ module.exports = function(grunt) {
             ]);
         } else if (target === 'fonts') {
             return grunt.task.run([
-                'copy:fonts'
+                'newer:copy:fonts'
+            ]);
+        } else if (target === 'images') {
+            return grunt.task.run([
+                'newer:imagemin',
+                'newer:svgmin'
             ]);
         }
 
@@ -27,7 +32,8 @@ module.exports = function(grunt) {
             'build:scripts',
             'build:html',
             'build:css',
-            'build:fonts'
+            'build:fonts',
+            'build:images'
         ]);
     });
 };

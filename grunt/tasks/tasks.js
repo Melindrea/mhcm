@@ -9,6 +9,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'concurrent:lint',
         'concurrent:build',
+        'concurrent:build2',
         'concurrent:test'
     ]);
 

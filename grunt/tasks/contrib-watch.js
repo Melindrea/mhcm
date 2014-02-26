@@ -14,10 +14,10 @@ module.exports = function(grunt) {
             files: ['<%= directories.flatBuild.js %>/{,*/}*.js'],
             tasks: ['lint:scripts', 'build:scripts']
         },
-        // images: {
-        //     files: ['<%= directories.flatBuild.base %>/assets/images/{,*/}*'],
-        //     tasks: ['images']
-        // },
+        images: {
+            files: ['<%= directories.flatBuild.base %>/assets/media/images/{,*/}*'],
+            tasks: ['build:images']
+        },
         fonts: {
             files: ['<%= directories.flatBuild.base %>/assets/fonts/{,*/}*'],
             tasks: ['build:fonts']
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                 livereload: '<%= connect.options.livereload %>'
             },
             files: [
-                '<%= directories.flatBuild.build %>/{,*/}*.html',
+                '<%= directories.flatBuild.build %>/**/*.html',
                 '<%= directories.flatBuild.build %>/assets/styles/{,*/}*.css',
                 '<%= directories.flatBuild.build %>/assets/scripts/{,*/}*.js',
                 '<%= directories.flatBuild.build %>/assets/{images,fonts}/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
