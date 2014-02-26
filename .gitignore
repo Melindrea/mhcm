@@ -3,6 +3,7 @@
 !.jshintrc
 !.bowerrc
 !.jsbeautifyrc
+!.prettifyrc
 !.editorconfig
 !.travis.yml
 !.gitattributes

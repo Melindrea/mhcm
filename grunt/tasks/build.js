@@ -10,7 +10,8 @@ module.exports = function(grunt) {
             ]);
         } else if (target === 'html') {
             return grunt.task.run([
-                'assemble'
+                'assemble',
+                'prettify'
             ]);
         } else if (target === 'css') {
             return grunt.task.run([
