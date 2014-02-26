@@ -6,7 +6,7 @@ module.exports = function(grunt) {
             limit: 4
         },
         'lint': ['lint:scripts', 'lint:json', 'lint:css'],
-        'build': ['build:scripts', 'build:html', 'build:css'],
+        'build': ['build:scripts', 'build:html', 'build:css', 'build:fonts'],
         'test': ['test:mocha']
     });
 };

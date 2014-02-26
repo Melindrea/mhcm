@@ -4,27 +4,27 @@ module.exports = function(grunt) {
     grunt.config('watch', {
         assemble: {
             files: ['<%= directories.flatBuild.base %>/{content,data,templates}/**/*.{md,hbs,yml,json}'],
-            tasks: ['assemble']
+            tasks: ['build:html']
         },
         styles: {
             files: ['<%= directories.flatBuild.styles %>/{,*/}*.scss'],
-            tasks: ['compass']
+            tasks: ['lint:css', 'build:css']
         },
-        // scripts: {
-        //     files: ['<%= directories.flatBuild.js %>/{,*/}*.js'],
-        //     tasks: ['scripts', 'modernizr']
-        // },
+        scripts: {
+            files: ['<%= directories.flatBuild.js %>/{,*/}*.js'],
+            tasks: ['lint:scripts', 'build:scripts']
+        },
         // images: {
         //     files: ['<%= directories.flatBuild.base %>/assets/images/{,*/}*'],
         //     tasks: ['images']
         // },
-        // fonts: {
-        //     files: ['<%= directories.flatBuild.base %>/assets/fonts/{,*/}*'],
-        //     tasks: ['fonts']
-        // },
+        fonts: {
+            files: ['<%= directories.flatBuild.base %>/assets/fonts/{,*/}*'],
+            tasks: ['build:fonts']
+        },
         json: {
             files: ['<%= directories.flatBuild.base %>/data/{,*/}*.json'],
-            tasks: ['jsonlint']
+            tasks: ['lint:json']
         },
         livereload: {
             options: {

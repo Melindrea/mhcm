@@ -16,12 +16,17 @@ module.exports = function(grunt) {
             return grunt.task.run([
                 'compass:dist'
             ]);
+        } else if (target === 'fonts') {
+            return grunt.task.run([
+                'copy:fonts'
+            ]);
         }
 
         grunt.task.run([
             'build:scripts',
             'build:html',
-            'build:css'
+            'build:css',
+            'build:fonts'
         ]);
     });
 };
