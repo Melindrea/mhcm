@@ -14,7 +14,8 @@ module.exports = function(grunt) {
             ]);
         } else if (target === 'css') {
             return grunt.task.run([
-                'compass:dist'
+                'compass:dist',
+                'autoprefixer'
             ]);
         } else if (target === 'fonts') {
             return grunt.task.run([
