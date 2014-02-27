@@ -8,8 +8,10 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'concurrent:lint',
+        'clean:flatBuild',
         'concurrent:build',
         'concurrent:build2',
+        'rev',
         'concurrent:test'
     ]);
 
@@ -35,4 +37,9 @@ module.exports = function(grunt) {
             'test:mocha'
         ]);
     });
+
+    grunt.registerTask('rev', [
+        'filerev',
+        'filerev_assets'
+    ]);
 };
