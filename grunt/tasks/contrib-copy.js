@@ -9,6 +9,14 @@ module.exports = function(grunt) {
                 src: '{,*/}*.{eot,svg,ttf,otf,woff}',
                 dest: '<%= directories.flatBuild.build %>/assets/fonts'
             }]
+        },
+        docs: {
+            files: [{
+                expand: true,
+                cwd: '<%= directories.flatBuild.base %>/docs',
+                src: '**',
+                dest: '<%= directories.flatBuild.build %>/phpdocs'
+            }]
         }
     });
 };

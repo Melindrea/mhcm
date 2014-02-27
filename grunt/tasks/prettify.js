@@ -10,7 +10,7 @@ module.exports = function(grunt) {
             expand: true,
             cwd: '<%= directories.flatBuild.build %>/',
             ext: '.html',
-            src: ['{,*/}*.html'],
+            src: ['**/*.html'],
             dest: '<%= directories.flatBuild.build %>/'
         }
     });

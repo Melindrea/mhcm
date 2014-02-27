@@ -17,6 +17,7 @@ module.exports = function(grunt) {
         grunt.task.run([
             'clean:flatBuild',
             'concurrent:build',
+            'concurrent:build2',
             'connect:livereload',
             'watch'
         ]);

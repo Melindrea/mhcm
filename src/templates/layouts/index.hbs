@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="utf-8" />
+    <title>Home</title>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <i class="icon-ellipsis-vertical"></i>
+          </a>
+          <div class="nav-collapse">
+            <ul class="nav pull-right">
+              <li class="dropdown">
+                <a href="mockup/index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            Mockups <b class="caret"></b>
+                        </a>
+                <ul class="dropdown-menu">
+                  <li><a href="mockup/index.html">Index</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="phpdocs/index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                <ul class="dropdown-menu">
+                  <li><a href="phpdocs/index.html">API Documentation</a>
+                  </li>
+                  <li><a href="phpdocs/namespaces/Command.html">\Command</a>
+                  </li>
+                  <li><a href="phpdocs/namespaces/Model.html">\Model</a>
+                  </li>
+                  <li><a href="phpdocs/namespaces/Hogebrandt.html">\Hogebrandt</a>
+                  </li>
+                  <li><a href="phpdocs/namespaces/Controller.html">\Controller</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown" id="charts-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="phpdocs/graphs/class.html">
+                      <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown" id="reports-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="phpdocs/reports/errors.html">
+                      <i class="icon-list-alt"></i>&#160;Errors
+                    </a>
+                  </li>
+                  <li>
+                    <a href="phpdocs/reports/markers.html">
+                      <i class="icon-list-alt"></i>&#160;Markers
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div role="document" class="container-fluid" style="margin-top: 80px">
+        <main role="main" id="content"><!-- role explicit for older browsers -->
+            {{> body}}
+        </main>
+    </div>
+
+    <footer role="contentinfo">
+
+    </footer>
+
+</body>
+</html>

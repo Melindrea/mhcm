@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     'use strict';
 
-    grunt.registerTask('build', function(target) {
+    grunt.registerTask('build', function(target, type) {
         if (target === 'scripts') {
             return grunt.task.run([
                 'modernizr',
@@ -11,6 +11,7 @@ module.exports = function(grunt) {
         } else if (target === 'html') {
             return grunt.task.run([
                 'assemble',
+                'copy:docs',
                 'prettify'
             ]);
         } else if (target === 'css') {
@@ -19,13 +20,25 @@ module.exports = function(grunt) {
                 'autoprefixer'
             ]);
         } else if (target === 'fonts') {
+            if (type === 'changed') {
+                return grunt.task.run([
+                    'newer:copy:fonts'
+                ]);
+            }
             return grunt.task.run([
-                'newer:copy:fonts'
+                'copy:fonts'
             ]);
         } else if (target === 'images') {
+            if (type === 'changed') {
+                return grunt.task.run([
+                    'newer:imagemin',
+                    'newer:svgmin'
+                ]);
+            }
+
             return grunt.task.run([
-                'newer:imagemin',
-                'newer:svgmin'
+                'imagemin',
+                'svgmin'
             ]);
         }
 

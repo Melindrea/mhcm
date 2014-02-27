@@ -16,11 +16,11 @@ module.exports = function(grunt) {
         },
         images: {
             files: ['<%= directories.flatBuild.base %>/assets/media/images/{,*/}*'],
-            tasks: ['build:images']
+            tasks: ['build:images:changed']
         },
         fonts: {
             files: ['<%= directories.flatBuild.base %>/assets/fonts/{,*/}*'],
-            tasks: ['build:fonts']
+            tasks: ['build:fonts:changed']
         },
         json: {
             files: ['<%= directories.flatBuild.base %>/data/{,*/}*.json'],
