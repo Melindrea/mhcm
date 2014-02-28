@@ -22,9 +22,7 @@ module.exports = function(grunt) {
         }
 
         grunt.task.run([
-            'lint:scripts',
-            'lint:json',
-            'lint:css'
+            'concurrent:lint'
         ]);
     });
 };

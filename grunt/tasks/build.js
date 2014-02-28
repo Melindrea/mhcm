@@ -43,11 +43,8 @@ module.exports = function(grunt) {
         }
 
         grunt.task.run([
-            'build:scripts',
-            'build:html',
-            'build:css',
-            'build:fonts',
-            'build:images'
+            'concurrent:build',
+            'concurrent:build2'
         ]);
     });
 };

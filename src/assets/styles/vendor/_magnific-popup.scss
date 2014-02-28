@@ -1,9 +1,30 @@
 /* Magnific Popup CSS */
+%default-position {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+%absolute-block {
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+}
+
+%absolute {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+%flat-right {
+    padding-top: 0;
+    right: 0;
+    top: 0;
+}
 .mfp-bg {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  @extend %default-position;
   z-index: 1042;
   overflow: hidden;
   position: fixed;
@@ -12,10 +33,7 @@
   filter: alpha(opacity=80); }
 
 .mfp-wrap {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  @extend %default-position;
   z-index: 1043;
   position: fixed;
   outline: none !important;
@@ -24,13 +42,8 @@
 .mfp-container {
   text-align: center;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
+  @extend %default-position;
   padding: 0 8px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .mfp-container:before {
@@ -123,9 +136,7 @@ button::-moz-focus-inner {
   width: 44px;
   height: 44px;
   line-height: 44px;
-  position: absolute;
-  right: 0;
-  top: 0;
+  @extend %absolute;
   text-decoration: none;
   text-align: center;
   opacity: 0.65;
@@ -150,9 +161,7 @@ button::-moz-focus-inner {
   width: 100%; }
 
 .mfp-counter {
-  position: absolute;
-  top: 0;
-  right: 0;
+  @extend %absolute;
   color: #cccccc;
   font-size: 12px;
   line-height: 18px; }
@@ -172,12 +181,9 @@ button::-moz-focus-inner {
   .mfp-arrow:hover, .mfp-arrow:focus {
     opacity: 1; }
   .mfp-arrow:before, .mfp-arrow:after, .mfp-arrow .mfp-b, .mfp-arrow .mfp-a {
-    content: '';
-    display: block;
+    @extend %absolute-block;
     width: 0;
     height: 0;
-    position: absolute;
-    left: 0;
     top: 0;
     margin-top: 35px;
     margin-left: 35px;
@@ -225,10 +231,7 @@ button::-moz-focus-inner {
   .mfp-iframe-scaler iframe {
     position: absolute;
     display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    @extend %default-position;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
     background: black; }
 
@@ -239,8 +242,6 @@ img.mfp-img {
   height: auto;
   display: block;
   line-height: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 40px 0 40px;
   margin: 0 auto; }
@@ -249,12 +250,9 @@ img.mfp-img {
 .mfp-figure {
   line-height: 0; }
   .mfp-figure:after {
-    content: '';
-    position: absolute;
-    left: 0;
+    @extend %absolute-block;
     top: 40px;
     bottom: 40px;
-    display: block;
     right: 0;
     width: auto;
     height: auto;
@@ -312,8 +310,6 @@ img.mfp-img {
     top: auto;
     padding: 3px 5px;
     position: fixed;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; }
     .mfp-img-mobile .mfp-bottom-bar:empty {
       padding: 0; }
@@ -345,19 +341,3 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px; } }
 
-.mfp-ie7 .mfp-img {
-  padding: 0; }
-.mfp-ie7 .mfp-bottom-bar {
-  width: 600px;
-  left: 50%;
-  margin-left: -300px;
-  margin-top: 5px;
-  padding-bottom: 5px; }
-.mfp-ie7 .mfp-container {
-  padding: 0; }
-.mfp-ie7 .mfp-content {
-  padding-top: 44px; }
-.mfp-ie7 .mfp-close {
-  top: 0;
-  right: 0;
-  padding-top: 0; }

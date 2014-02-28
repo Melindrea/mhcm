@@ -3,7 +3,9 @@ module.exports = function(grunt) {
 
     grunt.config('csscss', {
         options: {
-            verbose: true
+            verbose: true,
+            outputJson: true,
+            failWhenDuplicates: true
         },
         lint: {
             src: ['.tmp/main.css']
