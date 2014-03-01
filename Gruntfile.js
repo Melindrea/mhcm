@@ -21,6 +21,11 @@ module.exports = function(grunt) {
             },
             test: {
                 mocha: 'test/mocha'
+            },
+            laravel: {
+                base: 'app',
+                assets: 'public_html/assets',
+                public: 'public_html'
             }
         },
         files: {

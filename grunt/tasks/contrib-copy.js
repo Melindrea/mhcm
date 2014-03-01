@@ -10,6 +10,17 @@ module.exports = function(grunt) {
                 dest: '<%= directories.flatBuild.build %>/assets/fonts'
             }]
         },
+        assets: {
+            files: [{
+                expand: true,
+                cwd: '<%= directories.flatBuild.build %>/assets',
+                src: [
+                    '**',
+                    '!{scripts,styles}/{,*/}*.max.*'
+                ],
+                dest: '<%= directories.laravel.assets %>'
+            }]
+        },
         docs: {
             files: [{
                 expand: true,

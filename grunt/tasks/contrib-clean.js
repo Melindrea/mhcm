@@ -3,6 +3,7 @@ module.exports = function(grunt) {
 
     grunt.config('clean', {
         flatBuild: '<%= directories.flatBuild.build %>',
-        tmp: '.tmp'
+        tmp: '.tmp',
+        assets: '<%= directories.laravel.assets %>'
     });
 };
