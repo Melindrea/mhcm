@@ -23,6 +23,11 @@ module.exports = function(grunt) {
     });
 
     grunt.config('filerev_assets', {
+        options: {
+            prettyPrint: true,
+            cwd: '<%= directories.flatBuild.build %>',
+            dest: 'assets.json'
+        },
         dist: {}
     });
 };
