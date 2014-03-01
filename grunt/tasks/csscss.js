@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             failWhenDuplicates: true
         },
         lint: {
-            src: ['.tmp/main.css']
+            src: ['.tmp/main.max.css']
         }
     });
 };

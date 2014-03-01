@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                 '<%= directories.flatBuild.js %>/vendor/modernizr.dev.js'
             ],
             // the location of the resulting JS file
-            dest: '<%= directories.flatBuild.build %>/assets/scripts/head.full.js'
+            dest: '<%= directories.flatBuild.build %>/assets/scripts/head.max.js'
         },
         main: {
             // the files to concatenate
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                 '<%= directories.flatBuild.js %>/lightbox.js',
             ],
             // the location of the resulting JS file
-            dest: '<%= directories.flatBuild.build %>/assets/scripts/main.full.js'
+            dest: '<%= directories.flatBuild.build %>/assets/scripts/main.max.js'
         }
     });
 };

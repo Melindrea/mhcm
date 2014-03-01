@@ -6,7 +6,10 @@ module.exports = function(grunt) {
             src: '<%= directories.flatBuild.build %>/assets/fonts/**/*.{eot,svg,ttf,otf,woff}'
         },
         css: {
-            src: '<%= directories.flatBuild.build %>/assets/styles/**/*.css'
+            src: [
+                '<%= directories.flatBuild.build %>/assets/styles/**/*.css',
+                '!<%= directories.flatBuild.build %>/assets/styles/**/*.max.css'
+            ]
         },
         images: {
             src: '<%= directories.flatBuild.build %>/assets/media/images/**/*.{jpg,jpeg,gif,png,webp,svg}'
@@ -14,7 +17,7 @@ module.exports = function(grunt) {
         scripts: {
             src: [
                 '<%= directories.flatBuild.build %>/assets/scripts/**/*.js',
-                '!<%= directories.flatBuild.build %>/assets/scripts/**/*.full.js'
+                '!<%= directories.flatBuild.build %>/assets/scripts/**/*.max.js'
             ]
         }
     });
