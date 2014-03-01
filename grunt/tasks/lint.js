@@ -4,13 +4,13 @@ module.exports = function(grunt) {
     grunt.registerTask('lint', function(target) {
         if (target === 'scripts') {
             return grunt.task.run([
-                'newer:jsbeautifier',
+                'beautify:js',
                 'newer:jsvalidate',
                 'newer:jshint',
-                'newer:jsonlint'
             ]);
         } else if (target === 'json') {
             return grunt.task.run([
+                'beautify:json',
                 'newer:jsonlint'
             ]);
         } else if (target === 'css') {

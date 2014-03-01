@@ -12,7 +12,7 @@ module.exports = function(grunt) {
             return grunt.task.run([
                 'assemble',
                 'copy:docs',
-                'prettify'
+                'beautify:html'
             ]);
         } else if (target === 'css') {
             return grunt.task.run([
