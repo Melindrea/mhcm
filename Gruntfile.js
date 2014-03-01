@@ -43,7 +43,8 @@ module.exports = function(grunt) {
     // show elapsed time at the end
     require('time-grunt')(grunt);
     // load grunt tasks "just in time"
-    require('jit-grunt')(grunt);
+    require('jit-grunt')(grunt, {
+        'filerev_assets': 'grunt-filerev-assets'
+    });
     grunt.loadTasks('grunt/tasks');
-    grunt.loadNpmTasks('grunt-filerev-assets');
 };

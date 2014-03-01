@@ -16,6 +16,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('rev', [
         'filerev',
-        'filerev_assets'
+        'filerev_assets',
+        'lint:json'
     ]);
 };
