@@ -5,7 +5,9 @@ module.exports = function(grunt) {
         if (target === 'scripts') {
             return grunt.task.run([
                 'modernizr',
+                'emberTemplates',
                 'concat',
+                'clean:tmp',
                 'uglify'
             ]);
         } else if (target === 'html') {

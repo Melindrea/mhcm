@@ -12,7 +12,8 @@ module.exports = function(grunt) {
         js: {
             files: {
                 '<%= directories.flatBuild.build %>/assets/scripts/head.js': ['<%= concat.head.dest %>'],
-                '<%= directories.flatBuild.build %>/assets/scripts/main.js': ['<%= concat.main.dest %>']
+                '<%= directories.flatBuild.build %>/assets/scripts/main.js': ['<%= concat.main.dest %>'],
+                '<%= directories.flatBuild.build %>/assets/scripts/ember.js': ['<%= concat.ember.dest %>']
             }
         }
     });

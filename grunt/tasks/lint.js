@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.registerTask('lint', function(target) {
         if (target === 'scripts') {
             return grunt.task.run([
-                'beautify:js',
+                'beautify:scripts',
                 'newer:jsvalidate',
                 'newer:jshint',
             ]);

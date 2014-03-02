@@ -21,6 +21,14 @@
     "predef": [
         "Modernizr",
         "$",
-        "jQuery"
-    ]
+        "jQuery",
+        "Ember",
+        "DS",
+        "Handlebars",
+        "Showdown",
+        "moment"
+    ],
+    "globals": {
+        "App": true
+    }
 }
