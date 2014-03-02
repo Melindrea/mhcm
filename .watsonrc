@@ -1,0 +1,43 @@
+# watson rc
+# watson - inline issue manager
+# [goosecode] labs
+
+
+# Directories
+[dirs]
+grunt
+src
+test
+
+
+# Tags
+[tags]
+fix
+review
+todo
+
+
+# Ignores
+[ignore]
+.git
+*.swp
+bower_components
+src/assets/media
+src/assets/scripts/vendor
+src/assets/styles/vendor
+src/docs
+
+
+[github_api]
+Melindrea
+
+
+[github_endpoint]
+https://api.github.com
+
+
+[github_repo]
+Melindrea/mhcm.github.io
+
+
+

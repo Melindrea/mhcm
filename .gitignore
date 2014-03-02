@@ -8,6 +8,7 @@
 !.travis.yml
 !.gitattributes
 !.htaccess
+!.watsonrc
 *~
 *.zip
 dist

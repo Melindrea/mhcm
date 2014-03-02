@@ -22,6 +22,7 @@ module.exports = function(grunt) {
             }]
         },
         docs: {
+            // [todo] - Change over to parsing PHP code once that is done
             files: [{
                 expand: true,
                 cwd: '<%= directories.flatBuild.base %>/docs',
