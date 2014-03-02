@@ -11,6 +11,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: require('./package'),
         bower: require('./bower'),
+        watson: require('./watson'),
         directories: {
             flatBuild: {
                 base: 'src',
