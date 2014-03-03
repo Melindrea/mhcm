@@ -9,6 +9,7 @@
 !.gitattributes
 !.htaccess
 !.watsonrc
+!.provisioning
 *~
 *.zip
 dist
