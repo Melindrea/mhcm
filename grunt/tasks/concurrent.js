@@ -2,12 +2,11 @@ module.exports = function(grunt) {
     'use strict';
 
     grunt.config('concurrent', {
-        options: {
-            limit: 4
-        },
-        'lint': ['lint:scripts', 'lint:json', 'lint:css'],
-        'build': ['build:scripts', 'build:html', 'build:css', 'build:fonts'],
-        'build2': ['build:images'],
+        'lint': ['lint:scripts', 'lint:json'],
+        'lint2': ['lint:css'],
+        'build': ['build:scripts', 'build:images'],
+        'build2': ['build:html'],
+        'build3': ['build:css', 'build:fonts'],
         'test': ['test:mocha']
     });
 };

@@ -47,7 +47,8 @@ module.exports = function(grunt) {
 
         grunt.task.run([
             'concurrent:build',
-            'concurrent:build2'
+            'concurrent:build2',
+            'concurrent:build3'
         ]);
     });
 };

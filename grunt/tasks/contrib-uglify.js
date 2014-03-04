@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
     grunt.config('uglify', {
         options: {
-            report: 'gzip',
+            // report: 'gzip',
             mangle: false,
             compress: {
                 'drop_console': true

@@ -22,7 +22,8 @@ module.exports = function(grunt) {
         }
 
         grunt.task.run([
-            'concurrent:lint'
+            'concurrent:lint',
+            'concurrent:lint2'
         ]);
     });
 };
