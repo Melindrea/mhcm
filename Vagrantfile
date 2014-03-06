@@ -59,4 +59,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :path => ".provisioning/bootstrap"
   config.vm.provision :shell, :path => ".provisioning/yeoman", privileged: false
   config.vm.provision :shell, :path => ".provisioning/ruby", privileged: false
+  config.vm.provision :file, source: '~/.gitconfig', destination: '/home/vagrant/.gitconfig' if File.exist?(ENV['HOME'] + '/.gitconfig')
 end
