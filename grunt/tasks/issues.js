@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         branchName = require('execSync').exec('git branch | grep \'*\' | sed \'s/* //\'').stdout.trim(),
         issueNumber, rePattern, matches, file;
 
-    grunt.registerTask('issues', function(type, target) {
+    grunt.registerTask('issues', function(type, target, label) {
         if (type === 'remote') {
             sh('ghi list');
             return;
@@ -54,6 +54,20 @@ module.exports = function(grunt) {
             return grunt.task.run(['beautify:json']);
         } else if (type === 'last') {
             sh('git log -1 --oneline');
+            return;
+        } else if (type === 'start') {
+            if (label === undefined) {
+                label = 'enhancement';
+            }
+
+            if (typeof parseInt(target) === 'number' && target % 1 === 0) {
+                sh('ghi assign ' + target);
+                branchName = label + '/' + target;
+                sh('git checkout -b ' + branchName);
+
+            } else {
+                console.log('Use a valid number as the second argument, or none.');
+            }
             return;
         }
 
