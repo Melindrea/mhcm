@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     'use strict';
 
-    grunt.registerTask('deploy', function(target) {
+    grunt.registerTask('deploy', function(target, location) {
         if (target === 'pre') {
             return grunt.task.run([
                 'lint',
@@ -15,6 +15,15 @@ module.exports = function(grunt) {
                 'deploy:pre',
                 'clean:assets',
                 'copy:assets'
+            ]);
+        } else if (target === 'html') {
+            if (location === undefined) {
+                // Assume local if argument is left off
+                location = 'local';
+            }
+            return grunt.task.run([
+                'deploy:pre',
+                'rsync:' + location + 'Docs'
             ]);
         }
     });
