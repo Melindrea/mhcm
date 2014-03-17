@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         },
         productionDocs: {
             options: {
-                src: './html',
+                src: './html/',
                 dest: '/var/www/vhosts/docs.exaltedage.net' //,
                 // host: 'user@staging-host',
                 // syncDestIgnoreExcl: true
