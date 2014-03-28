@@ -13,5 +13,3 @@ nvm alias default 0.10.26 #sets the default assumption of any project to that
 curl https://npmjs.org/install.sh | sh
 
 npm install -g yo
-
-cd /vagrant && npm install && bower install

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+apt-get install -y apache2 libapache2-mod-php5 libapache2-mod-auth-mysql
+
+if [ ! -h /var/www ];
+then
+
+    rm -rf /var/www sudo
+    ln -s /vagrant/public_html /var/www
+
+    a2enmod rewrite
+    a2enmod ssl
+
+    mkdir /etc/apache2/ssl
+
+    openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -subj "/C=SE/ST=Denial/L=Katrineholm/O=Dis/CN=mhcm.dev" -keyout /etc/apache2/ssl/snake-oil.key  -out /etc/apache2/ssl/snake-oil.crt
+
+    # if [ ! -f /etc/apache2/sites-available/security-application.dev ];
+    # then
+    #     cp /vagrant/setup/security-application.dev /etc/apache2/sites-available
+    #     a2ensite security-application.dev
+    # fi
+    service apache2 restart
+fi

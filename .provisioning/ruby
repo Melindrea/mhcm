@@ -12,5 +12,3 @@ rvm install 2.1.1
 rvm --default use 2.1
 
 gem update --system
-
-cd /vagrant && bundle install

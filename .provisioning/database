@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+apt-get install -y mysql-server
+
+if [ ! -f /var/log/databasesetup ];
+then
+    echo "CREATE DATABASE mhcm" | mysql -uroot -ppassword
+
+    php /vagrant/artisan migrate
+    php /vagrant/artisan db:seed
+
+    touch /var/log/databasesetup
+fi

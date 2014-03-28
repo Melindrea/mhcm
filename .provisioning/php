@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+apt-add-repository -y ppa:ondrej/php5-oldstable
+apt-get update
+apt-get install -y php5-mysql php5-mcrypt php5-xsl
+
+cd /vagrant
+curl -sS https://getcomposer.org/installer | php
