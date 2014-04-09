@@ -8,6 +8,9 @@
     "file": "Gruntfile.js",
     "command": "grunt githooks"
 }, {
-    "file": "Gruntfile.js",
-    "command": "grunt githooks"
+    "file": "Gemfile.lock",
+    "command": "bundle"
+}, {
+    "file": "composer.lock",
+    "command": "php composer.phar update"
 }]

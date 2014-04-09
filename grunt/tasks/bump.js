@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.config('bump', {
         options: {
             files: '<%= files.packages %>',
-            updateConfigs: ['pkg', 'bower'],
+            updateConfigs: ['pkg', 'bower', 'composer'],
             commit: false,
             createTag: false,
             push: false

@@ -54,8 +54,7 @@ results
 npm-debug.log
 node_modules
 src/bower_components
-src/assets/scripts/vendor
-
+vendor
 html
 
 public_html/assets

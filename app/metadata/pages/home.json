@@ -1,0 +1,11 @@
+{
+    "site-title": false,
+    "meta": {
+        "description": "site.home.description",
+        "keywords": [
+            "site.meta.keywords.security",
+            "site.meta.keywords.seo",
+            "site.meta.keywords.laravel"
+        ]
+    }
+}

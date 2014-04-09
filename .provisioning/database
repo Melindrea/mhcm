@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-apt-get install -y mysql-server
+apt-get install -y mysql-server --fix-missing --fix-broken
 
 if [ ! -f /var/log/databasesetup ];
 then

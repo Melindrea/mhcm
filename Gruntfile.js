@@ -12,6 +12,7 @@ module.exports = function(grunt) {
         pkg: require('./package'),
         bower: require('./bower'),
         watson: require('./watson'),
+        composer: require('./composer'),
         directories: {
             flatBuild: {
                 base: 'src',
@@ -51,7 +52,7 @@ module.exports = function(grunt) {
                 '<%= directories.flatBuild.base %>/data/{,*/}*.json',
                 'grunt/hooks/data/*.json'
             ],
-            packages: ['package.json', 'bower.json']
+            packages: ['package.json', 'bower.json', 'composer.json']
         }
     });
 
