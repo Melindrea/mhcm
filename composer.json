@@ -47,8 +47,8 @@
             "app/database/seeds",
             "test/phpunit/TestCase.php"
         ],
-        "psr-0": {
-            "Hogebrandt": "app/libraries"
+        "psr-4": {
+            "Hogebrandt\\": "app/libraries"
         }
     },
     "scripts": {

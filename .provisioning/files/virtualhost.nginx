@@ -1,0 +1,32 @@
+server {
+        listen 80;
+        server_name www.mhcm.dev;
+        // $scheme will get the http protocol
+        // and 301 is best practice for tablet, phone, desktop and seo
+        return 301 $scheme://mhcm.dev$request_uri;
+}
+
+server {
+    listen   80 default_server;
+
+    server_name mhcm.dev;
+
+    root /vagrant/public_html/;
+    index index.php index.html index.htm;
+
+    # Remove trailing slash
+    rewrite ^/(.*)/$ /$1 permanent;
+
+    location / {
+         try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    # pass the PHP scripts to FastCGI server listening on /var/run/php5-fpm.sock
+    location ~ \.php$ {
+            try_files $uri /index.php =404;
+            fastcgi_pass unix:/var/run/php5-fpm.sock;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
+    }
+}

@@ -31,7 +31,8 @@ module.exports = function(grunt) {
                 templates: 'src/templates/ember'
             },
             test: {
-                mocha: 'test/mocha'
+                mocha: 'test/mocha',
+                phpunit: 'test/phpunit'
             },
             laravel: {
                 base: 'app',
