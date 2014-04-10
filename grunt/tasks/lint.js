@@ -19,6 +19,10 @@ module.exports = function(grunt) {
                 'csscss:lint',
                 'clean:tmp'
             ]);
+        } else if (target === 'php') {
+            return grunt.task.run([
+                'newer:phplint'
+            ]);
         }
 
         grunt.task.run([

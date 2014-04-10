@@ -48,6 +48,9 @@ module.exports = function(grunt) {
                 '!<%= directories.flatBuild.js %>/vendor/*'
 
             ],
+            php: [
+                '<%= directories.laravel.base %>/**/*.php',
+            ],
             json: [
                 '*.json',
                 '<%= directories.flatBuild.base %>/data/{,*/}*.json',

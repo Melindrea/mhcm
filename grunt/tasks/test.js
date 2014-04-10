@@ -7,6 +7,10 @@ module.exports = function(grunt) {
                 'connect:test',
                 'mocha'
             ]);
+        } else if (target === 'phpunit') {
+            return grunt.task.run([
+                'phpunit'
+            ]);
         }
 
         grunt.task.run([
