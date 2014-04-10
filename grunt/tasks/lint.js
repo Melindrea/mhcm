@@ -21,7 +21,8 @@ module.exports = function(grunt) {
             ]);
         } else if (target === 'php') {
             return grunt.task.run([
-                'newer:phplint'
+                'newer:phplint',
+                'phpcs'
             ]);
         }
 
