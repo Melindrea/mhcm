@@ -14,3 +14,5 @@ Current tags supported (can be expanded in .watsonrc): todo, fix, review.
 * `grunt issues:show<:issue>` -- If no issue is given, it tries to find an issue number based on the branchname. If an integer issue is given it uses that and runs `ghi show issue`
 * `grunt issues:watson<:target>` -- Runs `watson`, with an optional target of `-s target`
 * `grunt update` -- Saves the result to `watson.json`. If the branch is master it also runs `watson -u`, pushing the issues to github. The reason it doesn't always is because the contributor should be able to use Watson as a todo without it being exposed to the others.
+
+Cron script to run php vendor/bin/security-checker security:check composer.lock daily

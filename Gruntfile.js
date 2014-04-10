@@ -38,6 +38,9 @@ module.exports = function(grunt) {
                 base: 'app',
                 assets: 'public_html/assets',
                 public: 'public_html'
+            },
+            reports: {
+                phpmd: 'reports/phpmd'
             }
         },
         files: {

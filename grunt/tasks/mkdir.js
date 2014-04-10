@@ -24,6 +24,15 @@ module.exports = function(grunt) {
                     'app/libraries'
                 ]
             }
+        },
+        reports: {
+            options: {
+                create: [
+                    'reports/phpmd',
+                    'reports/phploc',
+                    'reports/pdepend'
+                ]
+            }
         }
     });
 };
