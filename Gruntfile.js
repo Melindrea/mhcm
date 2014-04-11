@@ -40,7 +40,9 @@ module.exports = function(grunt) {
                 public: 'public_html'
             },
             reports: {
-                phpmd: 'reports/phpmd'
+                phpmd: 'reports/phpmd',
+                phploc: 'reports/phploc',
+                pdepend: 'reports/pdepend'
             }
         },
         files: {

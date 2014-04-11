@@ -43,12 +43,20 @@ module.exports = function(grunt) {
                 'imagemin',
                 'svgmin'
             ]);
+        } else if (target === 'reports') {
+            return grunt.task.run([
+                'mkdir:reports',
+                'phpmd',
+                'phploc',
+                'pdepend'
+            ]);
         }
 
         grunt.task.run([
             'concurrent:build',
             'concurrent:build2',
-            'concurrent:build3'
+            'concurrent:build3',
+            'concurrent:build4'
         ]);
     });
 };
