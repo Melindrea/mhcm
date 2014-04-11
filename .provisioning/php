@@ -11,3 +11,6 @@ cd /vagrant
 curl -sS https://getcomposer.org/installer | php
 
 php composer.phar install
+
+echo "user = vagrant" >> /etc/php5/fpm/pool.d/www.conf
+echo "group = vagrant" >> /etc/php5/fpm/pool.d/www.conf

@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 apt-get install -y nginx
 
+cp /vagrant/.provisioning/files/conf.nginx /etc/nginx/nginx.conf
+cp /vagrant/.provisioning/files/virtualhost.nginx /etc/nginx/sites-available/mhcm.dev
+
 ln -s /etc/nginx/sites-available/mhcm.dev /etc/nginx/sites-enabled/mhcm.dev
 
 service nginx start
