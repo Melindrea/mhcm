@@ -1,21 +1,28 @@
 server {
-        listen 80;
-        server_name www.mhcm.dev;
-        # $scheme will get the http protocol
-        # and 301 is best practice for tablet, phone, desktop and seo
-        return 301 $scheme://mhcm.dev$request_uri;
+    listen         80;
+    server_name mhcm.dev;
+    return 301 https://mhcm.dev$request_uri;
 }
 
 server {
-    listen   80 default_server;
+    listen         443;
+    listen         80;
+    server_name www.mhcm.dev;
+    return 301 https://mhcm.dev$request_uri;
+}
 
+server {
+    listen   443;
+    ssl                  on;
+    ssl_certificate      /etc/nginx/ssl/snake-oil.crt;
+    ssl_certificate_key  /etc/nginx/ssl/snake-oil.key;
     server_name mhcm.dev;
 
     root /vagrant/public_html/;
     index index.php index.html index.htm;
 
     # Remove trailing slash
-    rewrite ^/(.*)/$ /$1 permanent;
+    # rewrite ^/(.*)/$ /$1 permanent;
 
     location / {
          try_files $uri $uri/ /index.php$is_args$args;
