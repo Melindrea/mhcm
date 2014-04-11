@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         } else if (target === 'html') {
             return grunt.task.run([
                 'assemble',
-                'copy:docs',
+                'build:docs',
                 'beautify:html'
             ]);
         } else if (target === 'css') {
@@ -49,6 +49,11 @@ module.exports = function(grunt) {
                 'phpmd',
                 'phploc',
                 'pdepend'
+            ]);
+        } else if (target === 'docs') {
+            return grunt.task.run([
+                'clean:phpdocs',
+                'phpdocumentor'
             ]);
         }
 

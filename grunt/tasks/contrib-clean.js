@@ -4,6 +4,7 @@ module.exports = function(grunt) {
     grunt.config('clean', {
         flatBuild: '<%= directories.flatBuild.build %>',
         tmp: '.tmp',
-        assets: '<%= directories.laravel.assets %>'
+        assets: '<%= directories.laravel.assets %>',
+        phpdocs: '<%= directories.reports.phpdocs %>'
     });
 };

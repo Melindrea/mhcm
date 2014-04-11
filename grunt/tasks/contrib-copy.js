@@ -20,15 +20,6 @@ module.exports = function(grunt) {
                 ],
                 dest: '<%= directories.laravel.assets %>'
             }]
-        },
-        docs: {
-            // [todo] - Change over to parsing PHP code once that is done
-            files: [{
-                expand: true,
-                cwd: '<%= directories.flatBuild.base %>/docs',
-                src: '**',
-                dest: '<%= directories.flatBuild.build %>/phpdocs'
-            }]
         }
     });
 };

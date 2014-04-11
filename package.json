@@ -52,7 +52,8 @@
         "grunt-phpcs": "~0.2.2",
         "grunt-phpmd": "~0.1.0",
         "shell": "~0.3.2",
-        "grunt-shell": "~0.6.4"
+        "grunt-shell": "~0.6.4",
+        "grunt-phpdocumentor": "~0.4.1"
     },
     "engines": {
         "node": ">=0.10.16"

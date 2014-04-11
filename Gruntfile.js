@@ -42,7 +42,8 @@ module.exports = function(grunt) {
             reports: {
                 phpmd: 'reports/phpmd',
                 phploc: 'reports/phploc',
-                pdepend: 'reports/pdepend'
+                pdepend: 'reports/pdepend',
+                phpdocs: '<%= directories.flatBuild.build %>/phpdocs'
             }
         },
         files: {
