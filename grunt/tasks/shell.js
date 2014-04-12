@@ -21,6 +21,15 @@ module.exports = function(grunt) {
 
                 return mkdir + ' && ' + pdepend;
             }
+        },
+        up: {
+            command: 'php artisan up'
+        },
+        down: {
+            command: 'php artisan down'
+        },
+        migrate: {
+            command: 'php artisan migrate'
         }
     });
 };

@@ -9,6 +9,7 @@ module.exports = function(grunt) {
             ]);
         } else if (target === 'phpunit') {
             return grunt.task.run([
+                'shell:up',
                 'phpunit'
             ]);
         }
