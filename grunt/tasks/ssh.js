@@ -34,7 +34,7 @@ module.exports = function(grunt) {
                 'php composer.phar -o update --no-dev'
             ].join('&&')
         },
-        migrate: {
+        database: {
             command: [
                 'cd <%= config.target.laravel %>',
                 'php artisan migrate'
