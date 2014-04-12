@@ -12,6 +12,9 @@ app/storage
 !.watsonrc
 !.provisioning
 composer.phar
+
+# Private files
+config
 *~
 *.zip
 dist

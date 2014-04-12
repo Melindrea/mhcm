@@ -63,6 +63,9 @@ module.exports = function(grunt) {
                 'grunt/hooks/data/*.json'
             ],
             packages: ['package.json', 'bower.json', 'composer.json']
+        },
+        config: {
+            remote: require('./config/remote')
         }
     });
 
@@ -71,7 +74,8 @@ module.exports = function(grunt) {
     // load grunt tasks "just in time"
     require('jit-grunt')(grunt, {
         'filerev_assets': 'grunt-filerev-assets',
-        'emberTemplates': 'grunt-ember-templates'
+        'emberTemplates': 'grunt-ember-templates',
+        'sshexec': 'grunt-ssh'
     });
     grunt.loadTasks('grunt/tasks');
 };
