@@ -8,7 +8,37 @@ module.exports = function(grunt) {
             password: '<%= config.remote.password %>'
         },
         uptime: {
-            command: 'uptime',
+            command: 'uptime'
+        },
+        down: {
+            command: [
+                'cd <%= config.target.laravel %>',
+                'php artisan down'
+            ].join('&&')
+        },
+        up: {
+            command: [
+                'cd <%= config.target.laravel %>',
+                'php artisan up'
+            ].join('&&')
+        },
+        test: {
+            command: [
+                'cd <%= config.target.laravel %>',
+                'ls'
+            ].join('&&')
+        },
+        composer: {
+            command: [
+                'cd <%= config.target.laravel %>',
+                'php composer.phar -o update --no-dev'
+            ].join('&&')
+        },
+        migrate: {
+            command: [
+                'cd <%= config.target.laravel %>',
+                'php artisan migrate'
+            ].join('&&')
         }
     });
 };

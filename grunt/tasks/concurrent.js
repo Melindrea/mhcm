@@ -8,6 +8,6 @@ module.exports = function(grunt) {
         'build2': ['build:html'],
         'build3': ['build:css', 'build:fonts'],
         'build4': ['build:reports'],
-        'test': ['test:mocha', 'test:phpunit']
+        'test': ['test:mocha']
     });
 };

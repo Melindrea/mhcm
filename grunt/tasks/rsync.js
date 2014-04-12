@@ -4,7 +4,14 @@ module.exports = function(grunt) {
     grunt.config('rsync', {
         options: {
             args: ['--verbose', '--delete'],
-            exclude: ['.git*', '*.scss', 'node_modules'],
+            exclude: [
+                '.git*',
+                '*.scss',
+                'node_modules',
+                'vendor',
+                'app/storage',
+                'phpdocs/phpdoc-cache*'
+            ],
             recursive: true
         },
         localDocs: {
@@ -16,9 +23,23 @@ module.exports = function(grunt) {
         productionDocs: {
             options: {
                 src: './html/',
-                dest: '/var/www/vhosts/docs.exaltedage.net' //,
-                // host: 'user@staging-host',
-                // syncDestIgnoreExcl: true
+                dest: '<%= config.target.html %>',
+                host: '<%= config.remote.username %>@<%= config.remote.host %>',
+                syncDestIgnoreExcl: true
+            }
+        },
+        localLaravel: {
+            options: {
+                src: '<%= files.laravel %>',
+                dest: '../laravel'
+            }
+        },
+        productionLaravel: {
+            options: {
+                src: '<%= files.laravel %>',
+                dest: '<%= config.target.laravel %>',
+                host: '<%= config.remote.username %>@<%= config.remote.host %>',
+                syncDestIgnoreExcl: true
             }
         }
     });

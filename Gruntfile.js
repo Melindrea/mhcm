@@ -62,10 +62,24 @@ module.exports = function(grunt) {
                 '<%= directories.flatBuild.base %>/data/{,*/}*.json',
                 'grunt/hooks/data/*.json'
             ],
-            packages: ['package.json', 'bower.json', 'composer.json']
+            packages: ['package.json', 'bower.json', 'composer.json'],
+            laravel: [
+                './app',
+                './public_html',
+                './bootstrap',
+                './artisan',
+                './composer.json',
+                './composer.lock',
+                './composer.phar',
+                './server.php'
+            ]
         },
         config: {
-            remote: require('./config/remote')
+            remote: require('./config/remote'),
+            target: {
+                html: '/srv/www/docs.exaltedage.net',
+                laravel: '/srv/www/exaltedage.net'
+            }
         }
     });
 
