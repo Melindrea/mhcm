@@ -26,8 +26,8 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-    'dev' => array('*dev*', '*local*'),
-    'production' => array('<% url %>'),
+    'dev' => array('vagrant-ubuntu-precise-64'),
+    'production' => array('spear-storm-falcon'),
 
 ));
 

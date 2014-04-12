@@ -10,7 +10,8 @@ module.exports = function(grunt) {
                 'node_modules',
                 'vendor',
                 'app/storage',
-                'phpdocs/phpdoc-cache*'
+                'phpdocs/phpdoc-cache*',
+                'app/config/production'
             ],
             recursive: true
         },

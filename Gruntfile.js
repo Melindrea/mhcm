@@ -71,6 +71,7 @@ module.exports = function(grunt) {
                 './composer.json',
                 './composer.lock',
                 './composer.phar',
+                './test',
                 './server.php'
             ]
         },

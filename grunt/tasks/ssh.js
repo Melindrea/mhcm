@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         composer: {
             command: [
                 'cd <%= config.target.laravel %>',
-                'php composer.phar -o update --no-dev'
+                'php composer.phar -o update'
             ].join('&&')
         },
         database: {

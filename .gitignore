@@ -15,6 +15,7 @@ composer.phar
 
 # Private files
 config
+app/config/production
 *~
 *.zip
 dist
