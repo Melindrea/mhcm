@@ -29,8 +29,10 @@ Form::macro(
 HTML::macro(
     'markdown',
     function ($text) {
-        $cleaned = \Purifier::clean($text);
+        $purifierSettings = \Config::get('purifier.settings.default');
+        $cleaned = \Purifier::clean($text, $purifierSettings);
         $markdown = \Markdown::defaultTransform($cleaned);
+        // $markdown = \Markdown::defaultTransform($text);
         $shortcode = \Shortcode::parseText($markdown);
         $typo = new \Typography();
         $typographed = $typo->process($shortcode);

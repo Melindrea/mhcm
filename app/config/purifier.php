@@ -1,9 +1,19 @@
 <?php
+
+/*
+ * This file is part of HTMLPurifier Bundle.
+ * (c) 2012 Maxime Dizerens
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 return array(
-    "settings" => array(
-        "default" => array(
-            "HTML.SafeIframe" => 'true',
-            "AutoFormat.AutoParagraph" => false,
+    'settings' => array(
+        'default' => array(
+            "HTML.SafeIframe" => true,
+            'AutoFormat.AutoParagraph' => false,
+            'AutoFormat.Linkify' => false,
             "HTML.TidyLevel" => 'none',
             "HTML.Doctype" => 'HTML 4.01 Transitional',
             "URI.SafeIframeRegexp" => "%^(http://|https://|//)(www.youtube.com/embed/|player.vimeo.com/video/)%",
