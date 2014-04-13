@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         'build': ['build:scripts', 'build:images'],
         'build2': ['build:html'],
         'build3': ['build:css', 'build:fonts'],
-        'build4': ['build:reports'],
+        'build4': ['build:reports', 'build:docs'],
         'test': ['test:mocha', 'test:phpunit']
     });
 };

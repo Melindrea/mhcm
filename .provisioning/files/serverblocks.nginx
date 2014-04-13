@@ -1,11 +1,21 @@
 server {
     listen         80;
+
+    #ssl                  on;
+    #ssl_certificate      /etc/nginx/ssl/snake-oil.crt;
+    #ssl_certificate_key  /etc/nginx/ssl/snake-oil.key;
+
     server_name mhcm.dev;
     return 301 https://mhcm.dev$request_uri;
 }
 
 server {
     listen         443;
+
+    ssl                  on;
+    ssl_certificate      /etc/nginx/ssl/snake-oil.crt;
+    ssl_certificate_key  /etc/nginx/ssl/snake-oil.key;
+
     listen         80;
     server_name www.mhcm.dev;
     return 301 https://mhcm.dev$request_uri;
@@ -13,9 +23,12 @@ server {
 
 server {
     listen   443;
+
     ssl                  on;
     ssl_certificate      /etc/nginx/ssl/snake-oil.crt;
     ssl_certificate_key  /etc/nginx/ssl/snake-oil.key;
+
+    #listen 80;
     server_name mhcm.dev;
 
     root /vagrant/public_html/;

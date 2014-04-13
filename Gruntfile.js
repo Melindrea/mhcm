@@ -37,7 +37,8 @@ module.exports = function(grunt) {
             laravel: {
                 base: 'app',
                 assets: 'public_html/assets',
-                public: 'public_html'
+                public: 'public_html',
+                metadata: 'app/metadata'
             },
             reports: {
                 phpmd: 'reports/phpmd',
@@ -51,7 +52,7 @@ module.exports = function(grunt) {
                 'Gruntfile.js',
                 'grunt/{,*/}*.js',
                 '<%= directories.flatBuild.js %>/**/*.js',
-                '!<%= directories.flatBuild.js %>/vendor/*'
+                '!<%= directories.flatBuild.js %>/vendor/*',
 
             ],
             php: [
@@ -60,7 +61,8 @@ module.exports = function(grunt) {
             json: [
                 '*.json',
                 '<%= directories.flatBuild.base %>/data/{,*/}*.json',
-                'grunt/hooks/data/*.json'
+                'grunt/hooks/data/*.json',
+                '<%= directories.laravel.metadata %>/**/*.json',
             ],
             packages: ['package.json', 'bower.json', 'composer.json'],
             laravel: [

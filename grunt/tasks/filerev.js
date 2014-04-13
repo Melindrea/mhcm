@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     grunt.config('filerev_assets', {
         options: {
             cwd: '<%= directories.flatBuild.build %>',
-            dest: 'assets.json'
+            dest: '<%= directories.laravel.metadata %>/assets.json'
         },
         dist: {}
     });
