@@ -17,6 +17,7 @@ module.exports = function(grunt) {
             return grunt.task.run([
                 'compass:lint',
                 'csscss:lint',
+                'colorguard:lint',
                 'clean:tmp'
             ]);
         } else if (target === 'php') {

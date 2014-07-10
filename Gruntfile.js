@@ -83,7 +83,7 @@ module.exports = function(grunt) {
                 html: '/srv/www/docs.exaltedage.net',
                 laravel: '/srv/www/exaltedage.net'
             }
-        }
+        },
     });
 
     // show elapsed time at the end

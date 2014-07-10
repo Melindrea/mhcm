@@ -1,87 +1,91 @@
 {
-    "name": "mhcm",
-    "version": "0.0.1",
-    "description": "Method: Harmonious Community Management. More portable setup for RPG chronicles.",
-    "private": true,
-    "author": "Marie Hogebrandt <iam@mariehogebrandt.se> (http://mariehogebrandt.se)",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/MHCM/mhcm.git"
-    },
-    "license": "MIT",
-    "devDependencies": {
-        "grunt": "~0.4.2",
-        "assemble": "~0.4.35",
-        "jit-grunt": "~0.2.1",
-        "time-grunt": "~0.2.9",
-        "grunt-jsvalidate": "~0.2.2",
-        "grunt-jsonlint": "~1.0.4",
-        "grunt-contrib-jshint": "~0.8.0",
-        "jshint-stylish": "~0.1.5",
-        "grunt-githooks": "~0.3.1",
-        "execSync": "~1.0.1-pre",
-        "grunt-concurrent": "~0.4.3",
-        "grunt-newer": "~0.6.1",
-        "grunt-notify": "~0.2.17",
-        "grunt-bump": "0.0.13",
-        "grunt-jsbeautifier": "~0.2.6",
-        "grunt-contrib-concat": "~0.3.0",
-        "grunt-contrib-uglify": "~0.3.2",
-        "grunt-modernizr": "~0.5.1",
-        "grunt-contrib-connect": "~0.7.0",
-        "grunt-contrib-watch": "~0.5.3",
-        "grunt-contrib-clean": "~0.5.0",
-        "grunt-mocha": "~0.4.10",
-        "grunt-csscss": "~0.6.1",
-        "grunt-contrib-compass": "~0.7.2",
-        "grunt-contrib-copy": "~0.5.0",
-        "grunt-autoprefixer": "~0.7.2",
-        "grunt-svgmin": "~0.3.1",
-        "grunt-contrib-imagemin": "~0.5.0",
-        "grunt-prettify": "~0.3.4",
-        "grunt-filerev": "~0.2.1",
-        "grunt-filerev-assets": "~0.3.1",
-        "grunt-contrib-cssmin": "~0.8.0",
-        "handlebars": "~1.3.0",
-        "ember-template-compiler": "~1.4.0-beta.1",
-        "grunt-ember-templates": "~0.4.18",
-        "grunt-rsync": "~0.5.0",
-        "grunt-mkdir": "^0.1.1",
-        "grunt-phpunit": "~0.3.3",
-        "grunt-phplint": "0.0.5",
-        "grunt-phpcs": "~0.2.2",
-        "grunt-phpmd": "~0.1.0",
-        "shell": "~0.3.2",
-        "grunt-shell": "~0.6.4",
-        "grunt-phpdocumentor": "~0.4.1",
-        "grunt-ssh": "~0.11.1",
-        "grunt-verb": "~0.2.1",
-        "verb": "~0.2.0",
-        "chai": "~1.9.1",
-        "mocha": "~1.18.2"
-    },
-    "engines": {
-        "node": ">=0.10.16"
-    },
-    "scripts": {
-        "postinstall": "grunt githooks"
-    },
-    "homepage": "https://github.com/Melindrea/mhcm",
-    "bugs": {
-        "url": "https://github.com/Melindrea/mhcm/issues"
-    },
-    "licenses": [{
-        "type": "MIT",
-        "url": "https://github.com/Melindrea/mhcm/blob/master/LICENSE-MIT"
-    }],
-    "keywords": [
-        "docs",
-        "documentation",
-        "generate",
-        "generator",
-        "markdown",
-        "templates",
-        "verb"
-    ],
-    "main": "index.js"
+  "name": "mhcm",
+  "version": "0.0.1",
+  "description": "Method: Harmonious Community Management. More portable setup for RPG chronicles.",
+  "private": true,
+  "author": "Marie Hogebrandt <iam@mariehogebrandt.se> (http://mariehogebrandt.se)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MHCM/mhcm.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "assemble": "~0.4.35",
+    "chai": "~1.9.1",
+    "ember-template-compiler": "~1.4.0-beta.1",
+    "execSync": "~1.0.1-pre",
+    "grunt": "~0.4.2",
+    "grunt-autoprefixer": "~0.7.2",
+    "grunt-bump": "0.0.13",
+    "grunt-cli": "~0.1.13",
+    "grunt-colorguard": "^0.1.2",
+    "grunt-concurrent": "~0.4.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compass": "~0.7.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-connect": "~0.7.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.8.0",
+    "grunt-contrib-imagemin": "~0.5.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-csscss": "~0.6.1",
+    "grunt-ember-templates": "~0.4.18",
+    "grunt-filerev": "~0.2.1",
+    "grunt-filerev-assets": "~0.3.1",
+    "grunt-githooks": "~0.3.1",
+    "grunt-jsbeautifier": "~0.2.6",
+    "grunt-jsonlint": "~1.0.4",
+    "grunt-jsvalidate": "~0.2.2",
+    "grunt-mkdir": "^0.1.1",
+    "grunt-mocha": "~0.4.10",
+    "grunt-modernizr": "~0.5.1",
+    "grunt-newer": "~0.6.1",
+    "grunt-notify": "~0.2.17",
+    "grunt-phpcs": "~0.2.2",
+    "grunt-phpdocumentor": "~0.4.1",
+    "grunt-phplint": "0.0.5",
+    "grunt-phpmd": "~0.1.0",
+    "grunt-phpunit": "~0.3.3",
+    "grunt-prettify": "~0.3.4",
+    "grunt-rsync": "~0.5.0",
+    "grunt-shell": "~0.6.4",
+    "grunt-ssh": "~0.11.1",
+    "grunt-svgmin": "~0.3.1",
+    "grunt-verb": "^0.2.4",
+    "handlebars": "~1.3.0",
+    "jit-grunt": "~0.2.1",
+    "jquery-builder": "~0.5.1",
+    "jshint-stylish": "~0.1.5",
+    "mocha": "~1.18.2",
+    "shell": "~0.3.2",
+    "time-grunt": "~0.2.9"
+  },
+  "engines": {
+    "node": ">=0.10.16"
+  },
+  "scripts": {
+    "postinstall": "grunt githooks"
+  },
+  "homepage": "https://github.com/Melindrea/mhcm",
+  "bugs": {
+    "url": "https://github.com/Melindrea/mhcm/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Melindrea/mhcm/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": [
+    "docs",
+    "documentation",
+    "generate",
+    "generator",
+    "markdown",
+    "templates",
+    "verb"
+  ],
+  "main": "index.js"
 }
